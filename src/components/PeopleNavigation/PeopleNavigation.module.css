@@ -1,0 +1,11 @@
+.navi__buttons_row {
+    display: flex;
+    justify-content: center;
+}
+
+.nav__link {
+    display: inline-block;
+    margin: var(--spacing-small);
+    overflow: hidden;
+}
+

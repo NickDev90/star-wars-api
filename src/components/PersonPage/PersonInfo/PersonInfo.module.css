@@ -1,0 +1,22 @@
+.person_info_container {
+    padding: var(--spacing-medium);
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+}
+
+.person_info__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.person_info__item {
+    padding: var(--spacing-ultrasmall);
+    margin-bottom: 7px;
+}
+
+.item__title {
+    text-decoration: underline;
+    text-shadow: var(--text-shadow-blue);
+}
