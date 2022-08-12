@@ -8,6 +8,7 @@ import { getPeopleImage } from '../../services/getPeopleData';
 import { withErrorApi } from '../../hoc-helpers/withErrorApi';
 import PersonPhoto from '../../components/PersonPage/PersonPhoto/PersonPhoto';
 import PersonInfo from '../../components/PersonPage/PersonInfo/PersonInfo';
+import PersonLinkBack from '../../components/PersonPage/PersonLinkBack/PersonLinkBack';
 
 const PersonPage = ({setErrorApi}) => {
 
@@ -51,8 +52,8 @@ const PersonPage = ({setErrorApi}) => {
 
   return (
     <>
-        <button onClick={()=>navigate(-1)} className={styles.back__button}>Go back</button>
-
+        {/* <button onClick={()=>navigate(-1)} className={styles.back__button}>Go back</button> */}
+        <PersonLinkBack/>
         <div className={styles.person__container}>
             <div>
                 <span className={styles.person__title}>{personName}</span>    

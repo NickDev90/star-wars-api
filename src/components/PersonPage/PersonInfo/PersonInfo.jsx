@@ -8,7 +8,7 @@ const PersonInfo = ({personInfo}) => {
             <ul className={styles.person_info__list}>
                 {personInfo.map(({ title, data }) => (
                     data && (
-                        <li className={styles.person_info__item}>
+                        <li className={styles.person_info__item} key={title}>
                            <span className={styles.item__title}> {title} </span>: {data}  
                         </li>)
                 ))}
