@@ -5,6 +5,7 @@
   --color-dark-grey: #10100e;
   --color-blue: #6a83fb;
   --color-violet: #ae72c2;
+  --color-red: #f75d83;
 
   --border-radius-small: 3px;
   --border-radius-medium: 5px;
@@ -13,6 +14,7 @@
   --spacing-small: 10px;
   --spacing-medium: 20px;
   --spacing-large: 30px;
+  --margin-list: 7px;
 
   --transition: 0.4s;
 

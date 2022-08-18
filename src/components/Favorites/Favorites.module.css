@@ -1,0 +1,26 @@
+.favorites_icon__container {
+    width: 40px;
+    position: relative;
+}
+
+.favorites_icon {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.favorites__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: var(--font-bold);
+    background-color: #fff;
+    color: var(--color-black);
+}

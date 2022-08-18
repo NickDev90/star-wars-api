@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
+import {useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import {getApiResource} from '@utils/network';
 import styles from './PersonPage.module.css';
 import { API_PERSON } from '../../constants/api';
@@ -10,25 +11,32 @@ import PersonPhoto from '../../components/PersonPage/PersonPhoto/PersonPhoto';
 import PersonInfo from '../../components/PersonPage/PersonInfo/PersonInfo';
 import PersonLinkBack from '../../components/PersonPage/PersonLinkBack/PersonLinkBack';
 
+import PersonFilms from '../../components/PersonPage/PersonFilms/PersonFilms';
+
 const PersonPage = ({setErrorApi}) => {
 
     const [personName, setPersonName] = useState(null);
     const [personInfo, setPersonInfo] = useState(null);
     const [personPhoto, setPersonPhoto] = useState(null);
+    const [personFilms, setPersonFilms] = useState(null);
+    const [isSelected, setIsSelected] = useState(false);
 
-    const navigate = useNavigate();
+
+    const favorites = useSelector(state => state.favorites);
 
     const params = useParams();
+    const id = params.id;
 
-
-    console.log(personInfo);
+    useEffect (() => {
+        if(favorites[id]) setIsSelected(true);
+        else setIsSelected(false);
+    }, [favorites])
 
     useEffect(() => {
         (async () => {
-            const id = params.id;
+            
             const res = await getApiResource(`${API_PERSON}/${id}`);
             if (res) {
-                setErrorApi(false);
                 setPersonName(res.name);
                 setPersonPhoto(getPeopleImage(id));
                 setPersonInfo([
@@ -40,10 +48,11 @@ const PersonPage = ({setErrorApi}) => {
                     {title: "Hair color", data: res.hair_color},
                     {title: "Skin colir", data: res.skin_color},
                 ]);
+                res.films.length && setPersonFilms(res.films);
+                setErrorApi(false);
             } else {
                 setErrorApi(true)
             }
-            console.log(res);
 
         })();
     }, [])
@@ -52,7 +61,6 @@ const PersonPage = ({setErrorApi}) => {
 
   return (
     <>
-        {/* <button onClick={()=>navigate(-1)} className={styles.back__button}>Go back</button> */}
         <PersonLinkBack/>
         <div className={styles.person__container}>
             <div>
@@ -61,14 +69,11 @@ const PersonPage = ({setErrorApi}) => {
 
                 <div className={styles.person_data__body}>
 
-                    <PersonPhoto personPhoto={personPhoto} personName={personName}/>
+                    <PersonPhoto personPhoto={personPhoto} personName={personName} id={id} isSelected={isSelected}/>
                                         
-                    {personInfo && 
-                    <PersonInfo personInfo={personInfo}/>}
+                    {personInfo && <PersonInfo personInfo={personInfo}/>}
                     
-
-               
-                    
+                    {personFilms && <PersonFilms personFilms={personFilms}/>}                   
             </div>
         </div>
             

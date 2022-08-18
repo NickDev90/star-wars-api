@@ -1,6 +1,5 @@
 .list__container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 -10px;
     padding: 0;
@@ -8,7 +7,6 @@
 }
 
 .list__item {
-    /* flex: 0 1 20%; */
     margin: var(--spacing-medium);
     background-color: var(--color-white);
     width: 190px;
@@ -26,7 +24,5 @@
     object-fit: cover;
     object-position: top center;
     border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
-}
-.person__name {
 }
 

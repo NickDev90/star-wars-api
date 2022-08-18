@@ -1,0 +1,34 @@
+.films__container {
+    padding: var(--spacing-medium) 0;
+}
+
+.films__list {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* padding: 10px; */
+}
+
+.film__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--margin-list);
+}
+
+.item__episode {
+    padding: 5px;
+    background-color: var(--color-red);
+    border-radius: var(--border-radius-medium);
+}
+
+.item__colon {
+    width: 20px;
+    font-weight: var(--font-bold);
+    text-align: center;
+}
+
+.item__title {
+    text-shadow: var(--text-shadow-yellow);
+}

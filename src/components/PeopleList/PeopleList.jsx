@@ -7,7 +7,7 @@ const PeopleList = ({people}) => {
 
   return (
     <ul className={styles.list__container}>
-        {people.map( hero => (
+        {people && people.map( hero => (
             <li key={hero.id} className={styles.list__item}>
                 <Link to={`/people/${hero.id}`}>
                     <img src={hero.img} alt="hero" className={styles.person__photo}/> 

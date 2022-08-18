@@ -7,6 +7,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import Header from '../components/Header/Header';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 import PersonPage from '../pages/PersonPage/PersonPage';
+import FavoritesPage from '../pages/FavoritesPage';
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='people/' element={<PeoplePage />}/>
         <Route path='people/:id' element={<PersonPage />}/>
         <Route path='not-found' element={<NotFoundPage />}/>
+        <Route path='favorites' element={<FavoritesPage />}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </div>

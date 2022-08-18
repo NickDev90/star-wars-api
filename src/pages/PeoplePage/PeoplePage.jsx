@@ -6,12 +6,12 @@ import PeopleList from '@components/PeopleList/PeopleList';
 import PeopleNavigation from '@components/PeopleNavigation';
 
 import { getApiResource, changeHTTP } from '@utils/network';
-import { getPeopleId, getPeopleImage } from '@services/getPeopleData';
-import { useQueryParams } from '@hooks/useQueryParams';
+import { getPeopleId, getPeopleImage, getPeoplePageId } from '@services/getPeopleData';
 
+import { useQueryParams } from '@hooks/useQueryParams';
 import { API_PEOPLE } from '@constants/api';
+
 import styles from './PeoplePage.module.css';
-import { getPeoplePageId } from '../../services/getPeopleData';
 
 
 const PeoplePage = ({setErrorApi}) => {
@@ -24,12 +24,9 @@ const PeoplePage = ({setErrorApi}) => {
     const query = useQueryParams();
     const queryPage = query.get('page');
 
-    // if (!queryPage) queryPage === 1 ;
-    console.log(queryPage);
-
     const getResource = async (url) => {
         const res = await getApiResource(url);
-        console.log(res);
+
         if (res) {
             const peopleList = res.results.map(({ name, url }) => {
                 const id = getPeopleId(url);
@@ -59,7 +56,6 @@ const PeoplePage = ({setErrorApi}) => {
     return (
 
         <div className={styles.peoplelist}>
-            {/* <h1 className='header__text'>Hi, people!</h1> */}
             <PeopleNavigation
                 getResource={getResource}
                 prevPage={prevPage}
