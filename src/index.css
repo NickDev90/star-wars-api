@@ -26,14 +26,33 @@
       0 0 2px var(--color-white),
       0 0 40px var(--color-blue);
 
+  --box-shadow-black:
+      0 16px 24px 2px rgba(0, 0, 0, 0.5),
+      0 6px 30px 5px rgba(0, 0, 0, 0.1),  
+      0 8px 10px -5px rgba(0, 0, 0, 0.2),
+
   --font-family-main: sans-serif;
   --font-bold: 600;
   --font-size-main: 16px;
   --font-size-header: 26px;
   --font-size-subtitle: 18px;
 
-  --theme-default-header: #cccc46;
-  --theme-default-bg: url('@images/bg.jpg');
+/* Theme styles */
+  --theme-light-header: #dfe2df;
+  --theme-dark-header: #ca6c6f;
+  --theme-neutral-header: #cccc46;
+  --theme-default-header: var(--theme-neutral-header);
+
+  --theme-light-bg: radial-gradient(circle, rgba(96,195,209,1) 0%, rgba(88,176,161,0.8130602582830007) 49%, rgba(96,195,209,1) 100%);
+  --theme-dark-bg: linear-gradient(10deg, rgba(2,0,36,1) 0%, rgba(25,25,59,1) 28%, rgba(2,0,37,1) 50%,
+                 rgba(2,0,37,1) 60%, rgba(8,36,42,1) 80%, rgba(16,41,46,1) 100%);
+  --theme-neutral-bg: url('@images/bg.jpg');
+  --theme-default-bg: var(--theme-neutral-bg);
+
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
 body {
@@ -55,4 +74,9 @@ img {
   text-shadow: 0 0 2px var(--color-black);
   color: var(--theme-default-header);
   transition: color var(--transition);
+}
+
+.light {
+  color: var(--color-light);
+  text-shadow: var(--color-shadow-light);
 }
