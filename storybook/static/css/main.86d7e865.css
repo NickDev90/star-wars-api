@@ -1,0 +1,120 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-family-main: sans-serif;
+    --font-bold: 600;
+
+    --transition: 0.4s;
+
+    --border-radius-small: 3px;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-lightgrey: #dfe2df;
+    --color-blue: #6a83fb;
+   
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+.UiButton_navi__button__LSPwz {
+    min-width: 100px;
+    padding: 10px;
+    background-color: transparent;
+    /* color: #fff; */
+    /* border: 1px solid #fff; */
+    border-radius: var(--border-radius-small);
+    outline: none;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-bold);
+    transition: var(--transition);
+}
+
+.UiButton_navi__button__LSPwz:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.UiButton_navi__button__LSPwz:disabled,
+.UiButton_navi__button__LSPwz:disabled:hover {
+    background-color: transparent;
+    border-color: grey;
+    color: grey;
+    cursor: auto;
+}
+
+.UiButton_dark__x9HMG {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
+
+.UiButton_dark__x9HMG:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.UiButton_light__rjV-e {
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+}
+
+.UiButton_light__rjV-e:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.UiInput_input__container__Mb37S {
+    --border-radius: 3px;
+    --border: 3px;
+    --clear-width: 35px
+}
+
+.UiInput_input__container__Mb37S {
+    position: relative;
+    display: inline-flex;
+}
+
+.UiInput_input__\+27V- {
+    min-width: 300px; 
+    padding: 10px 15px;
+    padding-right: calc(var(--clear-width) + 15px);
+    border: 3px solid;
+    border-color: var(--color-lightgrey);
+    border-radius: var(--border-radius-small);
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family-main);
+    outline: none;
+}
+
+.UiInput_input__\+27V-:focus {
+    border-color: var(--color-blue);
+}
+
+.UiInput_clear__icon__hURVh {
+    position: absolute;
+
+    top: var(--border);
+    right: var(--border);
+    width: var(--clear-width);
+    height: calc(100% - var(--border)* 2);
+
+    padding: 10px;
+    object-fit: contain;
+    object-position: center center;
+    transition: 0.3s;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.UiInput_clear__icon__disabled__HTdT8 {
+    opacity: 0.2;
+}
+
+
+/*# sourceMappingURL=main.86d7e865.css.map*/
