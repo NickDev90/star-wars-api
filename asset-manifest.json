@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/star-wars-api/static/css/main.68972c50.css",
-    "main.js": "/star-wars-api/static/js/main.ab0dbc96.js",
+    "main.js": "/star-wars-api/static/js/main.e650f5c5.js",
     "static/media/bg.jpg": "/star-wars-api/static/media/bg.29b25be31315dad3ce4e.jpg",
     "static/media/neutral-side.jpg": "/star-wars-api/static/media/neutral-side.c1d0a8d1869b3fbdb9ab.jpg",
     "static/media/han-solo.mp4": "/star-wars-api/static/media/han-solo.db435084c403f6b37d4d.mp4",
@@ -19,10 +19,10 @@
     "index.html": "/star-wars-api/index.html",
     "static/media/bookmarks_icon.svg": "/star-wars-api/static/media/bookmarks_icon.22a7a349ba41d00056ae5668e1929990.svg",
     "main.68972c50.css.map": "/star-wars-api/static/css/main.68972c50.css.map",
-    "main.ab0dbc96.js.map": "/star-wars-api/static/js/main.ab0dbc96.js.map"
+    "main.e650f5c5.js.map": "/star-wars-api/static/js/main.e650f5c5.js.map"
   },
   "entrypoints": [
     "static/css/main.68972c50.css",
-    "static/js/main.ab0dbc96.js"
+    "static/js/main.e650f5c5.js"
   ]
 }
