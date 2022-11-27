@@ -1,18 +1,8 @@
 .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-large);
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    margin-right: var(--spacing-large);
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
 }
 
 .list__container {

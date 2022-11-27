@@ -1,0 +1,36 @@
+.logo__container {
+    margin-right: 120px;
+    position: relative;
+    width: 80px;
+    min-height: 60px;
+    flex: 0 1 20%;
+    display: flex;
+    transition: all 0.3s ease 0s;
+}
+
+.list__wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    transition: all 0.3s ease 0s;
+}
+
+.logo__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.logo__item {
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.logo__img {
+    width:  60px;
+    height: 60px;
+}
+
+.logo__img:hover {
+    cursor: pointer;
+}

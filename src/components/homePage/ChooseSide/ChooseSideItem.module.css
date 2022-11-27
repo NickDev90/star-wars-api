@@ -1,4 +1,4 @@
-.container {   
+:root {   
     --border-radius: 10px;
 
     --color-light: #29e52d;
@@ -8,12 +8,6 @@
     --color-shadow-light:rgba(41, 229, 45, 0.4);
     --color-shadow-dark:rgba(216, 34, 40, 0.4);
     --color-shadow-neutral:rgba(224, 224, 81, 0.4);
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .sideItem {
@@ -40,8 +34,8 @@
     width: 100%;
     text-align: center;
     font-size: var(--font-size-subtitle);
-    /* left: 50%; */
 }
+
 
 .item__light {
     color: var(--color-light);
@@ -69,3 +63,4 @@
 .item__neutral:hover {
     box-shadow: 0 0 7px 2px var(--color-shadow-neutral);
 }
+

@@ -63,7 +63,9 @@
 body {
   margin: 0;
   padding: 0;
-  /* background-color: var(--color-dark-grey); */
+  min-height: 100vh;
+  overflow-y: scroll;
+  background-color: var(--color-dark-grey);
   color: #fff;
   font-family: var(--font-family-main);
   background: var(--theme-default-bg) 0 0/cover no-repeat fixed;
@@ -96,7 +98,7 @@ SCROLL
 }
 
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 4px;
 	height: 8px;
 }
 ::-webkit-scrollbar-thumb {
@@ -104,8 +106,8 @@ SCROLL
 	border-radius: 2px;
 }
 ::-webkit-scrollbar-track {
-	background-color: rgba(0, 0, 0, .7);
+	background-color: rgba(0, 0, 0, .9);
 }
 ::-webkit-scrollbar-corner {
-	background-color: rgba(0, 0, 0, .7);	
+	background-color: rgba(0, 0, 0, .9);	
 }
